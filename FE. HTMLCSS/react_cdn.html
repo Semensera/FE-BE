@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React Counter</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        function Counter() {
+            const [count, setCount] = React.useState(0);
+            return (
+                <div style={{ fontFamily: "system-ui, Arial", padding: 16 }}>
+                    <h1>Counter</h1>
+                    <div style={{ fontSize: 48, fontWeight: 700, marginBottom: 12 }}>{count}</div>
+                    <div style={{ display: "flex", gap: 8 }}>
+                        <button onClick={() => setCount((c) => c - 1)}>-</button>
+                        <button onClick={() => setCount((c) => c + 1)}>+</button>
+                        <button onClick={() => setCount(0)}>Reset</button>
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("app"));
+        root.render(<Counter />);
+    </script>
+</body>
+</html>

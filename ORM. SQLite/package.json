@@ -1,0 +1,14 @@
+{
+  "name": "backend-orm",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "sequelize": "^6.37.0",
+    "sqlite3": "^5.1.7",
+    "dotenv": "^16.4.5"
+  }
+}

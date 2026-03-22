@@ -1,0 +1,11 @@
+/* Пріоритет ID вищий за клас (Крок 23-25) */
+#app-test {
+    color: green;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.test-class {
+    color: red; /* Цей колір буде ігноруватися через ID вище */
+}
